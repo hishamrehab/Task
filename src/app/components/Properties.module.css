@@ -1,34 +1,14 @@
-.card {
-  width: 370px;
-  height: 349px;
-}
-
-.Image {
-  width: 370px;
-  height: 270px;
-}
-
-/* ##############  */
-
-.swiper {
+.mySwiper {
   width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
+  max-height: 500px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card {
+  height: 270px;
+  width: 370px;
+  margin: 20px;
 }

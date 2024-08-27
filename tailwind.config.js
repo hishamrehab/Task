@@ -15,8 +15,12 @@ module.exports = {
         secondary: "#FFFFFF",
         accent: "#F59E0B",
         background: "#F3F4F6",
+        black: "#12100B",
+        backgroundSecondary: "#F8F8F7",
+        hero: "#F8F8FC",
+        colorLocation: "#8D999D",
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
