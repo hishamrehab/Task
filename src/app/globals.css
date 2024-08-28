@@ -1,7 +1,7 @@
-@import url(https://db.onlinewebfonts.com/c/7a7de8177760c5273dae5087892ee62c?family=Helvetica+Neue+LT+Pro+95+Black);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/7a7de8177760c5273dae5087892ee62c?family=Helvetica+Neue+LT+Pro+95+Black);
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -11,6 +11,7 @@
 
 body {
   font-family: "Helvetica Neue LT Pro 95 Black";
+  /* background-image: url("./Hero.png"); */
 }
 .container {
   width: 85%;
