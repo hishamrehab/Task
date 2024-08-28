@@ -1,0 +1,28 @@
+.sectionSeven {
+  height: 827px;
+}
+
+.input {
+  width: 474px;
+  height: 64px;
+  background-color: #2d2d2d03;
+  outline: none;
+  border: 1px solid #f5f5fa;
+}
+.textarea {
+  width: 474px;
+  height: 104px;
+  background-color: #2d2d2d03;
+  outline: none;
+  border: 1px solid #f5f5fa;
+}
+
+.sectionSevenRight {
+  width: 570px;
+  height: 734px;
+}
+
+.sectionSevenLeft {
+  width: 475px;
+  height: 254px;
+}

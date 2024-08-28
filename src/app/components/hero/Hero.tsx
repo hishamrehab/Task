@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 import styles from "./Hero.module.css";
-import Rectangle from "../../../public/images/Rectangle 34.png";
+import Rectangle from "../../../../public/images/Rectangle 34.png";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -24,14 +25,17 @@ const Hero = () => {
           Donec bibendum nibh quis nisl luctus, at aliquet ipsum bibendum. Fusce
           at dui tincidunt nulla semper.
         </p>
-        <button className="w-44	h-14 flex items-center gap-1 px-7 flex-nowrap bg-primary">
-          <span className="font-sans font-bold text-sm text-secondary uppercase	">
-            read more
-          </span>
-          <span className="text-secondary h-8 w-8">
-            <MdArrowOutward />
-          </span>
-        </button>
+
+        <Link href="">
+          <button className="w-44	h-14 flex items-center gap-1 px-7 flex-nowrap bg-primary">
+            <span className="font-sans font-bold text-sm text-secondary uppercase	">
+              read more
+            </span>
+            <span className="text-secondary h-8 w-8">
+              <MdArrowOutward />
+            </span>
+          </button>
+        </Link>
       </div>
     </div>
   );

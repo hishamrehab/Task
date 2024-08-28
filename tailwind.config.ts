@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import images from "";
 const config: Config = {
   content: [
     "./node_modules/flowbite-react/lib/**/*.js",

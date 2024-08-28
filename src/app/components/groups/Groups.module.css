@@ -2,10 +2,12 @@
   border-right: 1px solid #ececf6;
   padding-right: 96px;
 }
+
 .groupOne:last-child {
-  border-right: none;
   padding-right: 79px;
+  border-right: 0;
 }
+
 .groupOne:first-child {
   padding-left: 79px;
 }
