@@ -1,12 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import cityCommercial from "../../../../public/images/Frame 1171277301.png";
+
 import Frame from "../../../../public/images/Frame 1000001535.png";
+
 import Image from "next/image";
 import { MdMailOutline } from "react-icons/md";
 import { FaKey } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
+
+
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -14,7 +19,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [nationalImage, setNationalImage] = useState(null);
-  const [agreeTerms, setAgreeTerms] = useState(false);
+  const [agreeTerms, setAgreeTerms] = useState(0);
   const [error, setError] = useState("");
   const router = useRouter();
 
@@ -38,6 +43,7 @@ const Register = () => {
       const response = await fetch("https://sunchase.backend.aait-d.com/api/register", {
         method: "POST",
         body: formData,
+        // credentials: "include",
       });
 
       const data = await response.json();
@@ -48,25 +54,39 @@ const Register = () => {
         setError(data.message || "Registration failed");
       }
     } catch (error) {
+
       console.log(error);
     }
   };
 
+
+
   return (
-    <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start p-4 md:p-10">
-      <div className="w-full md:w-1/2">
-        <Image src={cityCommercial} alt="City Commercial" className="w-full h-auto" />
-      </div>
+    <div className="container flex overflow-hidden">
+      <Image
+        src={cityCommercial}
+        width={756}
+        height={100}
+        alt=""
+        className="w-2/4"
+      />
 
-      <div className="w-full md:w-1/2 mt-10 md:mt-0 px-4">
-        <div className="flex justify-center mb-6">
-          <Image src={Frame} alt="Frame Logo" className="w-32 h-auto" />
-        </div>
+      <div className="pt-20 px-md">
+        <Image
+          src={Frame}
+          width={225}
+          height={67}
+          alt=""
+          className="mb-marginFrame ml-Ml101"
+        />
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="flex items-center gap-2 text-gray-700">
-              <MdMailOutline className="text-xl" />
+        <form onSubmit={handleSubmit}>
+          <div className="mb-8">
+            <label
+              htmlFor="name"
+              className="flex items-center gap-2 text-base font-normal text-primary"
+            >
+              <MdMailOutline />
               Name
             </label>
             <input
@@ -76,13 +96,16 @@ const Register = () => {
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
             />
           </div>
 
-          <div>
-            <label htmlFor="email" className="flex items-center gap-2 text-gray-700">
-              <MdMailOutline className="text-xl" />
+          <div className="mb-8">
+            <label
+              htmlFor="email"
+              className="flex items-center gap-2 text-base font-normal text-primary"
+            >
+              <MdMailOutline />
               Email Address
             </label>
             <input
@@ -92,87 +115,110 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
             />
           </div>
 
-          <div>
-            <label htmlFor="file" className="flex items-center gap-2 text-gray-700">
-              <MdMailOutline className="text-xl" />
+
+          <div className="mb-8">
+            <label
+              htmlFor="file"
+              className="flex items-center gap-2 text-base font-normal text-primary"
+            >
+              <MdMailOutline />
               National ID Image
             </label>
+
             <input
               type="file"
               accept="image/*"
               onChange={(e) => setNationalImage(e.target.files[0])}
               required
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded"
+              className="mb-4 p-2 border rounded "
             />
           </div>
 
-          <div>
-            <label htmlFor="password" className="flex items-center gap-2 text-gray-700">
-              <FaKey className="text-xl" />
+
+
+
+          <div className="mb-8">
+            <label
+              htmlFor="password"
+              className="flex items-center gap-2 text-base font-normal text-primary"
+            >
+              <FaKey />
               Password
             </label>
             <input
+              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
               type="password"
               id="password"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          <div>
-            <label htmlFor="confirm-password" className="flex items-center gap-2 text-gray-700">
-              <FaKey className="text-xl" />
+
+          <div className="mb-8">
+            <label
+              htmlFor="confirmPassword"
+              className="flex items-center gap-2 text-base font-normal text-primary"
+            >
+              <FaKey />
               Confirm Password
             </label>
             <input
+              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
               type="password"
-              id="confirm-password"
-              placeholder="Confirm your password"
+              id="confirmPassword"
+              placeholder="Enter your confirmed password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          <div className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              id="agree-terms"
-              checked={agreeTerms}
-              onChange={() => setAgreeTerms(!agreeTerms)}
-              className="rounded border-gray-300 text-blue-500 focus:ring-blue-500"
-            />
-            <label htmlFor="agree-terms" className="text-gray-700">
-              I agree to the terms and conditions
+          <div className="mb-8">
+            <label>
+              <input
+                type="checkbox"
+                checked={agreeTerms}
+                onChange={(e) => setAgreeTerms(e.target.checked ? 1 : 0)}
+                required
+              />
+              Agree to the terms and conditions
             </label>
           </div>
 
-          {error && <p className="text-red-500">{error}</p>}
+          {error && <div className="text-red-500 mb-4">{error}</div>}
 
           <button
             type="submit"
-            className="w-full py-3 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full h-14 flex items-center justify-center flex-row gap-1 bg-primary mb-16"
           >
-            Register
+            <span className="font-sans font-bold text-sm text-secondary lh21">
+              Create account
+            </span>
+            <MdArrowOutward className="text-secondary h-3 w-3" />
           </button>
 
-          <p className="mt-4 text-sm text-center text-gray-600">
-            Already have an account?{" "}
-            <Link href="/login" className="text-blue-500 hover:underline">
-              Log in
+          <div className="text-center pb-14">
+            <span className="font-sans font-normal text-base lh21 text-loginD">
+              Have an account?
+            </span>
+            <Link
+              href="login"
+              className="font-sans font-bold text-base lh21 text-primary"
+            >
+              Login
             </Link>
-          </p>
+          </div>
         </form>
       </div>
     </div>
+
   );
 };
 
