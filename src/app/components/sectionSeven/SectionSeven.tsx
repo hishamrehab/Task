@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./sectionSeven.module.css";
 import { MdWifiCalling2, MdMailOutline } from "react-icons/md";
-
 import Image from "next/image";
 import handPresenting from "../../../../public/images/hand-presenting-model-house-home-loan-campaign 1.png";
 import { MdArrowOutward } from "react-icons/md";

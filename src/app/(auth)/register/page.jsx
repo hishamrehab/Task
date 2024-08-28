@@ -54,7 +54,6 @@ const Register = () => {
         setError(data.message || "Registration failed");
       }
     } catch (error) {
-
       console.log(error);
     }
   };
@@ -223,14 +222,3 @@ const Register = () => {
 };
 
 export default Register;
-
-
-
-
-
-
-
-
-
-
-
