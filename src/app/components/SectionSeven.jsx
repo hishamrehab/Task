@@ -3,9 +3,8 @@ import styles from "./sectionSeven.module.css"
 import { MdWifiCalling2, MdMailOutline } from "react-icons/md";
 
 import Image from 'next/image';
-import handpresenting from "../../../public/images/hand-presenting-model-house-home-loan-campaign 1.png"
+import handPresenting from "../../../public/images/hand-presenting-model-house-home-loan-campaign 1.png"
 import { MdArrowOutward } from "react-icons/md";
-import { IoMdMail } from "react-icons/io";
 
 
 const SectionSeven = () => {
@@ -121,7 +120,7 @@ const SectionSeven = () => {
 
                     </div>
                 </div>
-                <Image className='absolute z-0 bottom-0 left-0' src={handpresenting} width={595} height={412} alt="" />
+                <Image className='absolute z-0 bottom-0 left-0' src={handPresenting} width={595} height={412} alt="" />
 
             </div>
         </div >
