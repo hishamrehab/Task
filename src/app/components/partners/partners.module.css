@@ -1,0 +1,14 @@
+.mySwiper {
+  width: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.card {
+  height: 270px;
+  width: 370px;
+  margin: 20px;
+}

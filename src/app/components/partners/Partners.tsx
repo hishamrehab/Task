@@ -1,19 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import React from "react";
 import Image from "next/image";
-import Slider from "react-slick";
-import styles from "./partners.module.css";
+import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styles from "./partners.module.css";
 
-const sliderSettings = {
+const sliderSettings: Settings = {
   dots: true,
   infinite: true,
   speed: 500,
   autoplay: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-
   responsive: [
     {
       breakpoint: 1024,
@@ -34,32 +34,31 @@ const sliderSettings = {
   ],
 };
 
-export default function Partners() {
-  const [data, setData] = useState([]);
+interface Partner {
+  id: string;
+  name: string;
+  logo: string;
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("https://sunchase.backend.aait-d.com/api/home");
-      const repo = await res.json();
-      setData(repo.data.partners);
-    };
-    fetchData();
-  }, []);
+interface PartnersProps {
+  partners: Partner[];
+}
 
+export default function Partners({ partners }: PartnersProps) {
   return (
-    <div className={`container mx-auto px-4 text-center ${styles.partners}`}>
+    <div className="container mx-auto px-4 text-center">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-6">
         Our Partners
       </h2>
 
       <Slider {...sliderSettings} className={styles.mySwiper}>
-        {data.map((card) => (
+        {partners.map((card) => (
           <div
             className={`flex justify-center items-center cursor-grab ${styles.card}`}
             key={card.id}
           >
             <Image
-              className={`${styles.Image} max-w-full h-auto`}
+              className="max-w-full h-auto"
               src={card.logo}
               width={300}
               height={308.55}

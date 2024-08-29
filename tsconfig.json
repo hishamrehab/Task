@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "src/app/components/Properties.jsx",
     "src/app/(auth)/login/page.tsx",
-    "src/app/(auth)/register/page.jsx"
+    "src/app/(auth)/register/page.jsx",
+    "src/app/components/partners/Partners.tsx"
   ],
   "exclude": ["node_modules"]
 }

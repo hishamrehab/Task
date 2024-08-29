@@ -14,11 +14,15 @@ interface PropertyData {
   id: string;
   name: string;
   image: string;
+  title: string;
+  address: string;
+  price: number;
+  monthly: string;
 }
 
 interface ApiResponse {
   data: {
-    properties: PropertyData[];
+    recently_added: PropertyData[];
   };
 }
 

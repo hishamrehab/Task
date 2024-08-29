@@ -33,9 +33,10 @@ export default function Login() {
       );
 
       const data = await response.json();
-
+      console.log(data);
       if (data.status === "success") {
-        router.push("/home");
+        localStorage.setItem("token", data.data.token);
+        router.push("/");
       } else {
         setError("Invalid email or password");
       }

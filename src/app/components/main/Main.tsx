@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Main = () => {
   return (
-    <section className="flex items-center justify-center flex-col w-full h-screen bg-no-repeat bg-cover bg-[url('/images/Rectangle_1_(2).png')]">
+    <section className="flex items-center justify-center flex-col w-full h-screen bg-no-repeat bg-cover">
       <div className="container flex items-center flex-col gap-y-8 md:gap-y-12 max-w-screen-lg">
         <h1 className="font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic leading-tight text-center text-secondary">
           We Help You Realize Your Dream Property
