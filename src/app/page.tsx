@@ -21,7 +21,7 @@ export default function Home() {
   }
   return (
     <>
-      <ImageComponent />
+      {/* <ImageComponent /> */}
       <Main />
       <Hero />
       <Groups />
