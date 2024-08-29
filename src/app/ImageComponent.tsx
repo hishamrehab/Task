@@ -1,4 +1,4 @@
-import Img from "../../../../public/images/Rectangle 1 (2).png";
+import Img from "./Hero.png";
 
 import Image from "next/image";
 
