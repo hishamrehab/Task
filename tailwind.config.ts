@@ -31,6 +31,7 @@ const config: Config = {
         footerBg: "#F3F3F1",
         borderCol: "#3E453E",
         FollowUsCol: " #8D999D",
+        navBorder: "#929EAA",
       },
       spacing: {
         md: "120px",
@@ -41,6 +42,7 @@ const config: Config = {
         p71: "71px",
         p67: "67px",
         p76: "76px",
+        p17: "17px",
       },
 
       width: {

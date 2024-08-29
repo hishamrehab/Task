@@ -1,29 +1,89 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
-
+import image from "../../../public/images/Frame 33 (2).png";
+import Link from "next/link";
+import { MdOutlineArrowDropDown } from "react-icons/md";
+import Group5 from "../../../public/images/Group (5).png";
+import Love from "../../../public/images/Vector (6).png";
+import { MdArrowOutward } from "react-icons/md";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menu, setOpenMenu] = useState(false);
 
   return (
     <nav className="bg-transparent px-[165px] pt-8 flex justify-between items-center">
-      <div className="text-white text-2xl font-bold">Logo</div>
-
-      <div className="hidden lg:flex space-x-6 items-center">
-        <a href="#" className="text-white">
-          Home
-        </a>
-        <a href="#" className="text-white">
-          About
-        </a>
-        <a href="#" className="text-white">
-          Services
-        </a>
+      <div className="hidden lg:flex space-x-6 items-center ">
+        <Link href="">
+          <Image
+            src={image}
+            width={267}
+            height={36}
+            alt=""
+            className="w-[267] h-[36] "
+          />
+        </Link>
+        <div className="flex items-center justify-between gap-6">
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19"
+          >
+            Home
+          </Link>
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19"
+          >
+            About us
+          </Link>
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19"
+          >
+            services
+          </Link>
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19"
+          >
+            Properties
+          </Link>
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19 flex items-center gap-.5"
+          >
+            Our Partners
+            <MdOutlineArrowDropDown className="w-5 h-6 text-hero" />
+          </Link>{" "}
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19"
+          >
+            Contact us
+          </Link>
+          <Link
+            href="#"
+            className="text-secondary font-normal text-base	loading-lh19 flex items-center gap-2 border-r border-solid	border-navBorder pr-p17	"
+          >
+            <Image src={Group5} width={20.6} height={20.6} alt="" />
+            <span className="cursor-pointer">Ar</span>
+          </Link>
+          <Image
+            src={Love}
+            width={26.05}
+            height={24.08}
+            alt=""
+            className="cursor-pointer"
+          />
+        </div>
 
         <div className="relative">
-          <button className="text-white" onClick={() => setIsOpen(!isOpen)}>
-            More
-          </button>
+          <Link href="">
+            <button className="flex items-center gap-1  px-3  py-3  bg-secondary text-primary font-normal text-sm  w-[218px] h-[48px] ">
+              Become an ambassador
+              <MdArrowOutward className="h-3 w-3 ml-2" />
+            </button>
+          </Link>
           {isOpen && (
             <div className="absolute top-full mt-2 w-32 bg-white text-black rounded-md shadow-lg">
               <a href="#" className="block px-4 py-2">
@@ -38,10 +98,6 @@ const Navbar = () => {
             </div>
           )}
         </div>
-
-        <button className="bg-white text-black px-4 py-2 rounded-md">
-          Contact Us
-        </button>
       </div>
 
       <div className="lg:hidden">

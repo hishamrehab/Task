@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 // import Frame33 from "../../../public/images/Frame 33 (1).png";
-import Frame33 from "../../../public/images/Frame 33 (1).png";
+import Frame33 from "../../../public/images/Frame.png";
 
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
