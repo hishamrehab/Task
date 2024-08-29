@@ -11,17 +11,24 @@ const sliderSettings: Settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  autoplay: true,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
+  autoplay: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1020,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
     {

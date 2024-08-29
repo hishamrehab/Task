@@ -12,18 +12,19 @@ const Navbar = () => {
   const [menu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="bg-transparent px-[165px] pt-8 flex justify-between items-center md:mr-auto md:ml-auto">
-      <div className="hidden lg:flex space-x-6 items-center ">
+    <nav className="container bg-transparent pt-8 flex justify-between items-center md:mr-auto md:ml-auto">
+      <div className="hidden lg:flex space-x-6 items-center md:space-x-3  m-auto">
         <Link href="">
           <Image
             src={image}
             width={267}
             height={36}
             alt=""
-            className="w-[267] h-[36] "
+            className="lg:w-[267px] lg:h-[36px] md:w-[200px] md:h-auto"
           />
         </Link>
-        <div className="flex items-center justify-between gap-6">
+
+        <div className="flex items-center md:gap-1 lg:gap-6">
           <Link
             href="#"
             className="text-secondary font-normal text-base	loading-lh19"
@@ -38,13 +39,13 @@ const Navbar = () => {
           </Link>
           <Link
             href="#"
-            className="text-secondary font-normal text-base	loading-lh19"
+            className="text-secondary font-normal text-base md:text-sm loading-lh19"
           >
             services
           </Link>
           <Link
             href="#"
-            className="text-secondary font-normal text-base	loading-lh19"
+            className="text-secondary font-normal text-base md:text-sm loading-lh19"
           >
             Properties
           </Link>
@@ -57,7 +58,7 @@ const Navbar = () => {
           </Link>{" "}
           <Link
             href="#"
-            className="text-secondary font-normal text-base	loading-lh19"
+            className="text-secondary font-normal text-base md:text-sm loading-lh19"
           >
             Contact us
           </Link>
@@ -78,12 +79,16 @@ const Navbar = () => {
         </div>
 
         <div className="relative">
-          <Link href="">
-            <button className="flex items-center gap-1  px-3  py-3  bg-secondary text-primary font-normal text-sm  w-[218px] h-[48px] ">
+          <Link
+            href=""
+            className="hidden md:block md:w-[100px] md:h-[35px] lg:w-[218px] lg:h-[48px]"
+          >
+            <button className="flex items-center gap-1 px-3 py-3 bg-secondary text-primary font-normal text-sm ">
               Become an ambassador
               <MdArrowOutward className="h-3 w-3 ml-2" />
             </button>
           </Link>
+
           {isOpen && (
             <div className="absolute top-full mt-2 w-32 bg-white text-black rounded-md shadow-lg">
               <a href="#" className="block px-4 py-2">

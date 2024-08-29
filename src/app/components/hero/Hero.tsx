@@ -56,7 +56,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="text-center md:text-left mt-10  max-w-lg">
+      <div className="text-center md:items-center md:m-auto  mt-10  max-w-lg">
         <h2 className="font-black text-3xl md:text-5xl text-primary pb-5">
           We Help You Realize Your Dream Property
         </h2>

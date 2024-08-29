@@ -42,7 +42,7 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1020,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -50,6 +50,7 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
           dots: true,
         },
       },
+
       {
         breakpoint: 600,
         settings: {
@@ -68,7 +69,7 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
         {data.map((card) => {
           return (
             <div
-              className={`flex items-center flex-wrap cursor-grab text-left w-[370px]`}
+              className={`flex items-center flex-wrap cursor-grab text-left w-[370px] min-w-[370px]`}
               key={card.id}
             >
               <Image
@@ -79,7 +80,6 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
                 draggable="false"
                 alt={card.name}
               />
-
               <div className="px-6">
                 <h3 className="mt-5 text-xl font-normal leading text-primary pb-3">
                   {card.title}
