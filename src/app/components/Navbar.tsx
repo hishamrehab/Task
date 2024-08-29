@@ -12,7 +12,7 @@ const Navbar = () => {
   const [menu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="bg-transparent px-[165px] pt-8 flex justify-between items-center">
+    <nav className="bg-transparent px-[165px] pt-8 flex justify-between items-center md:mr-auto md:ml-auto">
       <div className="hidden lg:flex space-x-6 items-center ">
         <Link href="">
           <Image

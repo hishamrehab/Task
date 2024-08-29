@@ -1,5 +1,4 @@
 "use client";
-import styles from "./recentlyAdd.module.css";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,6 +8,7 @@ import { FaVectorSquare } from "react-icons/fa";
 import { MdOutlineBed } from "react-icons/md";
 import { PiVectorThreeThin } from "react-icons/pi";
 import { MdArrowOutward } from "react-icons/md";
+import { AiOutlineEnvironment } from "react-icons/ai";
 
 interface PropertyData {
   id: string;
@@ -61,18 +61,18 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
   };
 
   return (
-    <div className={`container text-center ${styles.recentlyAdd}`}>
+    <div className={`container text-center m-auto content-center`}>
       <h2 className="text-2xl font-black mb-10">Recently added</h2>
 
-      <Slider {...sliderSettings} className={styles.mySwiper}>
+      <Slider {...sliderSettings} className="cursor-grab">
         {data.map((card) => {
           return (
             <div
-              className={`flex items-center flex-wrap cursor-grab text-left ${styles.card}`}
+              className={`flex items-center flex-wrap cursor-grab text-left w-[370px]`}
               key={card.id}
             >
               <Image
-                className={`${styles.Image}`}
+                className="w-[370px] h-[308.55px]"
                 src={card.image}
                 width={370}
                 height={308.55}
@@ -86,13 +86,13 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
                 </h3>
 
                 <div className="flex items-center gap-1 justify-start flex-row mb-4">
-                  <CiLocationOn className="text-primary h-3 w-3" />
+                  <AiOutlineEnvironment className="text-primary h-3 w-3" />
                   <span className="text-sm font-normal leading-4 text-colorLocation">
                     {card.address}
                   </span>
                 </div>
 
-                <div className="flex items-center justify-between w-full mb-8">
+                <div className="flex items-center flex-row gap-6 mb-8">
                   <div className="flex gap-1">
                     <FaVectorSquare className="w-3 h-3 text-primary" />
                     <span className="text-sm font-normal leading-4 text-colorLocation">
@@ -115,18 +115,18 @@ export async function RecentlyAdd(): Promise<JSX.Element> {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between w-[308.55px]">
                   <div>
                     <h3 className="font-sans text-base leading-4 font-bold text-primary pb-1">
                       {card.price}EGP
                     </h3>
 
-                    <p className="font-sans text-xs	font-normal leading-4 text-monthlyColor">
+                    <p className="font-sans text-xs	font-normal leading-[17px] text-monthlyColor">
                       {card.monthly}Monthly
                     </p>
                   </div>
 
-                  <MdArrowOutward className="w-5 h-5 text-primary" />
+                  <MdArrowOutward className="w-[h-17px] h-[17px] text-primary" />
                 </div>
               </div>
             </div>

@@ -2,16 +2,12 @@
 import React, { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import cityCommercial from "../../../../public/images/Frame 1171277301.png";
-
 import Frame from "../../../../public/images/Frame 1000001535.png";
-
 import Image from "next/image";
 import { MdMailOutline } from "react-icons/md";
 import { FaKey } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
-
-
 
 const Register = () => {
   const [fullName, setFullName] = useState("");

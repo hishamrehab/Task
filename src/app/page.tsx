@@ -11,6 +11,7 @@ import SectionSeven from "./components/sectionSeven/SectionSeven";
 import Footer from "./components/Footer";
 import { useRouter } from "next/navigation";
 import ImageComponent from "./ImageComponent";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   // const router = useRouter();
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <>
       <ImageComponent />
+      <Navbar />
       <Main />
       <Hero />
       <Groups />

@@ -52,10 +52,10 @@ export default function Login() {
         width={756}
         height={100}
         alt=""
-        className="h-screen bg-contain"
+        className="h-screen bg-contain w-[auto]"
       />
 
-      <div className="pt-20 px-md">
+      <div className="pt-20 px-md ">
         <Image
           src={Frame}
           width={225}
@@ -75,7 +75,7 @@ export default function Login() {
             </label>
 
             <input
-              className={` border-0 w-w516 h-h46 pr-p20  py-p23 font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
+              className={` border-0 w-[516px] h-[64px] pr-p20  bg-inputBg  py-p23  font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
               type="email"
               placeholder="Enter Your Email"
               id="email"
@@ -95,7 +95,7 @@ export default function Login() {
             </label>
 
             <input
-              className={`border-0 w-w516 h-h46 pr-p20  py-p23 font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
+              className={`border-0 w-[516px] h-[64px] bg-inputBg  pr-p20  py-p23 font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
               type="password"
               id="password"
               placeholder="Enter your password"

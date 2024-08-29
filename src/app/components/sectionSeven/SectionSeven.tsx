@@ -7,14 +7,11 @@ import { MdArrowOutward } from "react-icons/md";
 
 const SectionSeven = () => {
   return (
-    <div className="relative z-5">
+    <div className="relative z-5 pt-[184px] mx-auto ">
       <div
-        className={`container  flex items-start justify-between gap-32 
-                ${styles.sectionSeven}`}
+        className={`container  flex items-start justify-center  gap-32  flex-row h-[827px]`}
       >
-        <div
-          className={`flex flex-col flex-start mt-16 ${styles.sectionSevenLeft}`}
-        >
+        <div className={`flex flex-col flex-start mt-16 w-[475px] h-[254px]`}>
           <h3 className="text-3xl block font-black mb-14 text-primary">
             We'll help you find a place you'll love!
           </h3>
@@ -36,9 +33,7 @@ const SectionSeven = () => {
           </div>
         </div>
 
-        <div
-          className={` border border-borderColor ${styles.sectionSevenRight}`}
-        >
+        <div className={` border border-borderColor w-[570px] h-[734px]`}>
           <div className="section-seven-right-content text-left p-12">
             <h3 className="text-2xl font-black mb-1 text-primary">
               Contact us

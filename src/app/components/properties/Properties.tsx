@@ -56,28 +56,30 @@ export async function Properties(): Promise<JSX.Element> {
 
   return (
     <>
-      <div className="container text-center">
+      <div className="container text-center bp-15 m-auto">
         <h2 className="text-2xl font-black mb-10">Properties</h2>
 
         <Slider {...sliderSettings} className={styles.mySwiper}>
           {data.map((card) => (
             <div
-              className={`flex items-center flex-wrap ${styles.card}`}
+              className={`flex items-center flex-wrap flex-row justify-between ${styles.card} gap-[30px] `}
               key={card.id}
             >
               <Image
-                className={styles.Image}
+                className={`${styles.Image} w-[370px] h-[270px]`}
                 src={card.image}
                 width={370}
                 height={270}
                 alt={card.name}
               />
 
-              <div className=" flex items-center justify-between flex-row py-6 pr-5">
-                <span className="text-primary text-xl font-normal ml-5">
+              <div className="flex items-center justify-between gap-5 px-3 py-5 w-[370px]">
+                <div className="text-primary text-xl 	loading-lh23">
                   {card.name}
-                </span>
-                <FaArrowDown className="text-primary w-5 h-4 cursor-pointer mr-5" />
+                </div>
+                <div>
+                  <FaArrowDown className="text-primary w-[17px] h-[17px] cursor-pointer" />
+                </div>
               </div>
             </div>
           ))}

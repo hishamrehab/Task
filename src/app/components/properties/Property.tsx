@@ -14,10 +14,10 @@ const Property = () => {
         </h2>
 
         <button className="w-44	h-14 flex items-center justify-center flex-row gap-1  flex-nowrap bg-primary">
-          <span className="font-normal text-base	 text-secondary ">
+          <span className="font-normal text-base text-secondary ">
             Sell your unit
           </span>
-          <MdArrowOutward className="text-secondary h-hArrow w-wArrow" />
+          <MdArrowOutward className="text-secondary h-[12px] w-[12px]" />
         </button>
       </div>
       <div>

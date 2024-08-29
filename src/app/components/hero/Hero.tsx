@@ -49,14 +49,14 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="container flex flex-col md:flex-row items-center gap-8 md:gap-16 pt-16 md:pt-32">
+    <div className="container flex flex-col md:flex-row items-center gap-8 md:gap-16 m-auto">
       {/* Hero Image */}
-      <div className="hidden md:block mt-10 md:mt-40">
-        <Image src={Rectangle} alt="Hero Image" className="w-full h-auto" />
+      <div className="hidden md:block ">
+        <Image src={Rectangle} alt="Hero Image" className="w-[100%] h-auto" />
       </div>
 
       {/* Hero Content */}
-      <div className="text-center md:text-left mt-10 md:mt-40 max-w-lg">
+      <div className="text-center md:text-left mt-10  max-w-lg">
         <h2 className="font-black text-3xl md:text-5xl text-primary pb-5">
           We Help You Realize Your Dream Property
         </h2>
@@ -73,9 +73,9 @@ const Hero = () => {
         </p>
 
         <Link href="">
-          <button className="flex items-center gap-1 px-7 py-3 bg-primary text-secondary font-bold text-sm uppercase">
+          <button className="w-[178px] h-[56px] flex items-center gap-1 px-7 py-3 bg-primary text-secondary font-bold text-sm uppercase">
             read more
-            <MdArrowOutward className="h-5 w-5" />
+            <MdArrowOutward className="h-4 w-4 ml-3" />
           </button>
         </Link>
       </div>

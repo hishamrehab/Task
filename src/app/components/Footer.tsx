@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
-// import Frame33 from "../../../public/images/Frame 33 (1).png";
-import Frame33 from "../../../public/images/Frame.png";
+
+import Frame33 from "../../../public/images/Frame 1 (1).png";
 
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiYoutube } from "react-icons/ci";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -40,14 +41,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-between pt-14 pb-p76 border-b border-borderCol">
+        <div className="flex justify-between pt-14 pb-p76 border-b border-borderCol flex-wrap">
           <div>
             <Image
               src={Frame33}
               width={202.99}
               height={16}
               alt=""
-              className="bg-primary mb-4"
+              className="mb-4 w-[202.99] h-[16]"
             />
 
             <p className="text-base	 font-normal	loading-lh39px mb-8">
@@ -59,22 +60,23 @@ const Footer = () => {
               <span className="text-FollowUsCol font-normal text-base loading-lh19">
                 Follow us on
               </span>
-              <FaFacebookF className="text-primary w-5" />
-              <FaXTwitter className="text-primary w-5" />
-              <IoLogoInstagram className="text-primary w-5" />
-              <CiYoutube className="text-primary w-5" />
+              <FaFacebookF className="text-primary w-5 cursor-pointer" />
+              <FaXTwitter className="text-primary w-5 cursor-pointer" />
+              <IoLogoInstagram className="text-primary w-5 cursor-pointer" />
+              <CiYoutube className="text-primary w-5 cursor-pointer" />
             </div>
           </div>
-          <div className="footer-links flex  flex-col	 gap-5 text-primary font-normal text-base	loading-lh19">
-            <p>Main Links</p>
-            <p>Home</p>
-            <p>Services</p>
-            <p>Contact us</p>
+          <div className="footer-links flex  flex-col	 gap-5 text-primary font-normal text-base	loading-lh19 flex-wrap ">
+            <Link href="">Main Links</Link>
+            <Link href="">Home</Link>
+            <Link href="">Our Projects</Link>
+            <Link href="">Services</Link>
+            <Link href="">Contact us</Link>
           </div>
           <div className="footer-links flex  flex-col	 gap-7 text-primary font-normal  text-lg	loading-lh21">
-            <p>Quick Links</p>
-            <p>Privacy policy</p>
-            <p>Terms of Use</p>
+            <Link href="">Quick Links</Link>
+            <Link href="">Privacy policy</Link>
+            <Link href="">Terms of Use</Link>
           </div>
         </div>
         <p className="pt-6 text-center pb-4">

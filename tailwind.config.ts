@@ -32,6 +32,7 @@ const config: Config = {
         borderCol: "#3E453E",
         FollowUsCol: " #8D999D",
         navBorder: "#929EAA",
+        inputBg: "#2d2d2d03",
       },
       spacing: {
         md: "120px",
@@ -67,6 +68,7 @@ const config: Config = {
         lh21: "21px",
         lh39px: "39px",
         lh19: "19.06px",
+        lh23: "23.8px",
       },
 
       fontSize: {
