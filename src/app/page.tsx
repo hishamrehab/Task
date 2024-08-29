@@ -13,15 +13,15 @@ import ImageComponent from "./components/ImageComponent/ImageComponent";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
-  const token = localStorage.getItem("token");
+  // const router = useRouter();
+  // const token = localStorage.getItem("token");
 
-  if (!token) {
-    return router.push("/login");
-  }
+  // if (!token) {
+  //   return router.push("/login");
+  // }
   return (
     <>
-      {/* <ImageComponent /> */}
+      <ImageComponent />
       <Main />
       <Hero />
       <Groups />

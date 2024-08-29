@@ -36,7 +36,7 @@ export default function Login() {
       console.log(data);
       if (data.status === "success") {
         localStorage.setItem("token", data.data.token);
-        router.push("/");
+        router.push("/page");
       } else {
         setError("Invalid email or password");
       }
