@@ -24,15 +24,15 @@ export default function Home() {
     <>
       <ImageComponent />
       <Navbar />
-      {/* <Main /> */}
-      {/* <Hero /> */}
-      {/* <Groups /> */}
-      {/* <Properties /> */}
-      {/* <RecentlyAdd /> */}
-      {/* <SectionSix /> */}
-      {/* <PartnersPage /> */}
-      {/* <SectionSeven /> */}
-      {/* <Footer /> */}
+      <Main />
+      <Hero />
+      <Groups />
+      <Properties />
+      <RecentlyAdd />
+      <SectionSix />
+      <PartnersPage />
+      <SectionSeven />
+      <Footer />
     </>
   );
 }

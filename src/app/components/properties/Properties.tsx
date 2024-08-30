@@ -3,6 +3,9 @@ import React from "react";
 import Image from "next/image";
 import Slider, { Settings } from "react-slick";
 import { FaArrowDown } from "react-icons/fa6";
+import styles from "./Properties.module.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Property from "./Property";
 
 interface PropertyData {
@@ -25,6 +28,7 @@ export async function Properties(): Promise<JSX.Element> {
 
   const sliderSettings: Settings = {
     dots: true,
+
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -32,19 +36,12 @@ export async function Properties(): Promise<JSX.Element> {
     autoplay: true,
     responsive: [
       {
-        breakpoint: 1020,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
       {
@@ -59,27 +56,29 @@ export async function Properties(): Promise<JSX.Element> {
 
   return (
     <>
-      <div className="container mx-auto text-center px-4 py-8">
+      <div className="container text-center bp-15 m-auto">
         <h2 className="text-2xl font-black mb-10">Properties</h2>
 
-        <Slider {...sliderSettings} className="slick-slider">
+        <Slider {...sliderSettings} className={styles.mySwiper}>
           {data.map((card) => (
             <div
-              className="flex items-center flex-wrap justify-between gap-6"
+              className={`flex items-center flex-wrap flex-row justify-between ${styles.card} gap-[30px] `}
               key={card.id}
             >
               <Image
-                className="w-[370px] h-[270px] sm:w-[300px] sm:h-[225px] md:w-[350px] md:h-[260px]"
+                className={`${styles.Image} w-[370px] h-[270px]`}
                 src={card.image}
                 width={370}
                 height={270}
                 alt={card.name}
               />
 
-              <div className="flex items-center justify-between gap-5 px-3 py-5 w-full sm:w-[300px]">
-                <div className="text-primary text-xl">{card.name}</div>
+              <div className="flex items-center justify-between gap-5 px-3 py-5 w-[370px]">
+                <div className="text-primary text-xl 	loading-lh23">
+                  {card.name}
+                </div>
                 <div>
-                  <FaArrowDown className="text-primary w-4 h-4 cursor-pointer" />
+                  <FaArrowDown className="self-end text-primary w-[17px] h-[17px] cursor-pointer" />
                 </div>
               </div>
             </div>

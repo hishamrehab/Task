@@ -57,13 +57,13 @@ const Register = () => {
 
 
   return (
-    <div className="container flex overflow-hidden">
+    <div className="flex pb-[100px]">
       <Image
         src={cityCommercial}
         width={756}
         height={100}
         alt=""
-        className="w-2/4"
+        className="w-2/4 "
       />
 
       <div className="pt-20 px-md">
@@ -91,7 +91,7 @@ const Register = () => {
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               required
-              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
+              className="border-0 md:w-[450px] md:h-[64px]  xl:w-[516px] xl:h-[64px] pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
             />
           </div>
 
@@ -110,7 +110,7 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
+              className="border-0 md:w-[450px] md:h-[64px]  xl:w-[516px] xl:h-[64px]  pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
             />
           </div>
 
@@ -145,7 +145,7 @@ const Register = () => {
               Password
             </label>
             <input
-              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
+              className="border-0 md:w-[450px] md:h-[64px]  xl:w-[516px] xl:h-[64px] pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
               type="password"
               id="password"
               placeholder="Enter your password"
@@ -165,7 +165,7 @@ const Register = () => {
               Confirm Password
             </label>
             <input
-              className="border-0 w-w516 h-h46 pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
+              className="border-0 md:w-[450px] md:h-[64px]  xl:w-[516px] xl:h-[64px] pr-p20 py-p23 font-sans text-sm font-normal leading-lh18 bg-loginInputBgCol text-loginInputCol outline-none"
               type="password"
               id="confirmPassword"
               placeholder="Enter your confirmed password"

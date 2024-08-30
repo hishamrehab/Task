@@ -7,58 +7,57 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import Group5 from "../../../public/images/Group (5).png";
 import Love from "../../../public/images/Vector (6).png";
 import { MdArrowOutward } from "react-icons/md";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menu, setOpenMenu] = useState(false);
 
   return (
     <nav className="container bg-transparent pt-8 flex justify-between items-center md:mr-auto md:ml-auto">
-      <div className="hidden lg:flex space-x-6 items-center md:space-x-3  m-auto">
-        <Link href="">
-          <Image
-            src={image}
-            width={267}
-            height={36}
-            alt=""
-            className="lg:w-[267px] lg:h-[36px] md:w-[200px] md:h-auto"
-          />
-        </Link>
+      <Link href="">
+        <Image
+          src={image}
+          alt=""
+          className="xl:w-[267px] xl:h-[36px] lg:w-[180px] lg:h-auto"
+        />
+      </Link>
 
-        <div className="flex items-center md:gap-1 lg:gap-6">
+      <div className="hidden lg:flex space-x-6 items-center md:space-x-3  m-auto">
+        <div className="flex items-center  md:gap-1 lg:gap-6 ">
           <Link
             href="#"
-            className="text-secondary font-normal text-base	loading-lh19"
+            className="text-secondary font-normal 	xl:text-base lg:text-xs loading-lh19"
           >
             Home
           </Link>
           <Link
             href="#"
-            className="text-secondary font-normal text-base	loading-lh19"
+            className="text-secondary font-normal 	xl:text-base lg:text-xs loading-lh19"
           >
             About us
           </Link>
           <Link
             href="#"
-            className="text-secondary font-normal text-base md:text-sm loading-lh19"
+            className="text-secondary font-normal 	xl:text-base lg:text-xs loading-lh19"
           >
             services
           </Link>
           <Link
             href="#"
-            className="text-secondary font-normal text-base md:text-sm loading-lh19"
+            className="text-secondary font-normal 	xl:text-base lg:text-xs loading-lh19"
           >
             Properties
           </Link>
           <Link
             href="#"
-            className="text-secondary font-normal text-base	loading-lh19 flex items-center gap-.5"
+            className="text-secondary font-normal xl:text-base lg:text-xs 	loading-lh19 flex items-center gap-.5"
           >
             Our Partners
             <MdOutlineArrowDropDown className="w-5 h-6 text-hero" />
           </Link>{" "}
           <Link
             href="#"
-            className="text-secondary font-normal text-base md:text-sm loading-lh19"
+            className="text-secondary font-normal 	xl:text-base lg:text-xs loading-lh19"
           >
             Contact us
           </Link>
@@ -81,9 +80,9 @@ const Navbar = () => {
         <div className="relative">
           <Link
             href=""
-            className="hidden md:block md:w-[100px] md:h-[35px] lg:w-[218px] lg:h-[48px]"
+            className="sm:hidden md:block md:w-[180px] md:h-[35px] lg:w-[210px] lg:h-[48px]"
           >
-            <button className="flex items-center gap-1 px-3 py-3 bg-secondary text-primary font-normal text-sm ">
+            <button className="md:px-2 lg:px-2 flex items-center gap-1 px-3 py-3 text-sm  bg-secondary text-primary font-normal ">
               Become an ambassador
               <MdArrowOutward className="h-3 w-3 ml-2" />
             </button>

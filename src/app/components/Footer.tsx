@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <footer className="bg-footerBg overflow-hidden">
       <div className="container footer-content pt-p71">
-        <div className="flex flex-col md:flex-row items-center justify-between pb-p67 border-b border-borderCol">
-          <div className="w-full md:w-w399 h-h75 mb-6 md:mb-0">
-            <h3 className="font-black text-fs32 text-primary leading-lh39px mb-2 text-center md:text-left">
+        <div className="flex flex-col md:flex-row items-center justify-between pb-p67 border-b border-borderCol ">
+          <div className=" w-full mb-6 md:mb-0  max-w-[550px]">
+            <h3 className="font-black text-fs32 text-primary  leading-lh39px mb-2 text-center md:text-left">
               Subscribe to newsletter
             </h3>
             <p className="font-normal text-lg leading-lh21 text-primary text-center md:text-left">
@@ -21,9 +21,9 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full md:w-w670 bg-backgroundSecondary flex flex-col md:flex-row items-center justify-center md:justify-end">
+          <div className="w-full md:w-w670 flex flex-col md:flex-row items-center justify-center md:justify-end">
             <input
-              className="border-0 w-full md:w-w516 font-sans text-base font-normal leading-lh21 bg-backgroundSecondary text-primary outline-none mb-4 md:mb-0 md:mr-4"
+              className="border-0 w-full h-14 font-sans text-base font-normal leading-lh21 bg-backgroundSecondary text-primary outline-none mb-4 md:mb-0 "
               type="email"
               placeholder="Enter your email address"
               id="email"
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between pt-14 pb-p76 border-b border-borderCol flex-wrap">
+        <div className="flex flex-col md:flex-row justify-between pt-[64px] pb-p76 border-b border-borderCol flex-wrap">
           <div className="mb-6 md:mb-0">
             <Image
               src={Frame33}
@@ -48,7 +48,7 @@ const Footer = () => {
               className="mb-4 w-[202.99] h-[16]"
             />
 
-            <p className="text-base font-normal leading-lh39px mb-8">
+            <p className="text-base font-normal leading-lh39px mb-8 w-[600px]">
               Donec bibendum nibh quis nisl luctus, at aliquet ipsum bibendum.
               Fusce at dui tincidunt nulla semper.
             </p>

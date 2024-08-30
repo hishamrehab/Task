@@ -75,13 +75,6 @@ const config: Config = {
         fs32: "32px",
       },
     },
-    screens: {
-      sm: "640px", // Small devices (mobile)
-      md: "768px", // Medium devices (tablet)
-      lg: "1024px", // Large devices (laptop)
-      xl: "1280px", // Extra large devices (desktop)
-      "2xl": "1536px", // 2x extra large devices (large desktop)
-    },
   },
   plugins: [require("flowbite/plugin")],
 };

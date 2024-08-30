@@ -46,13 +46,13 @@ export default function Login() {
   };
 
   return (
-    <div className="container flex ">
+    <div className="flex pb-[100px]">
       <Image
         src={cityCommercial}
-        width={756}
-        height={100}
+        // width={10}
+        // height={100}
         alt=""
-        className="h-screen bg-contain w-[auto]"
+        className="md:w-[40vw] md:h-[100vh] xl:w-[50vw] xl:h-[h-screen]"
       />
 
       <div className="pt-20 px-md ">
@@ -75,7 +75,7 @@ export default function Login() {
             </label>
 
             <input
-              className={` border-0 w-[516px] h-[64px] pr-p20  bg-inputBg  py-p23  font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
+              className={` border-0 md:w-[450px] md:h-[64px]  xl:w-[516px] xl:h-[64px] pr-p20  bg-inputBg  py-p23  font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
               type="email"
               placeholder="Enter Your Email"
               id="email"
@@ -95,7 +95,7 @@ export default function Login() {
             </label>
 
             <input
-              className={`border-0 w-[516px] h-[64px] bg-inputBg  pr-p20  py-p23 font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
+              className={`border-0 md:w-[450px] md:h-[64px]  xl:w-[516px] xl:h-[64px] bg-inputBg  pr-p20  py-p23 font-sans	 text-sm font-normal leading-lh18 bg-loginInputBgCol  text-loginInputCol outline-none	 `}
               type="password"
               id="password"
               placeholder="Enter your password"
@@ -126,7 +126,7 @@ export default function Login() {
             </span>
             <Link
               href="register"
-              className="font-sans font-bold  text-base lh21 text-primary"
+              className="font-sans font-bold  text-base lh21 text-primary "
             >
               Create account
             </Link>
