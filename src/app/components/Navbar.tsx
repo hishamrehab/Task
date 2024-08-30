@@ -18,7 +18,7 @@ const Navbar = () => {
         <Image
           src={image}
           alt=""
-          className="xl:w-[267px] xl:h-[36px] lg:w-[180px] lg:h-auto"
+          className="md:w-[100px] lg:w-[180px] lg:h-auto xl:w-[267px] xl:h-[36px] "
         />
       </Link>
 
