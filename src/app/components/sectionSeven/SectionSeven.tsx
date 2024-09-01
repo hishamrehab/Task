@@ -97,7 +97,7 @@ const SectionSeven = () => {
         </div>
 
         <Image
-          className="sm:hidden  md:block md:w-[400px] md:h-[300px] xl:w-[595px] xl:h-[412px] absolute z-0 bottom-0 left-0"
+          className="hidden  md:block md:w-[400px] md:h-[300px] xl:w-[595px] xl:h-[412px] absolute z-0 bottom-0 left-0"
           src={handPresenting}
           width={595}
           height={412}
